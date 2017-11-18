@@ -1,0 +1,335 @@
+*{
+    max-width: 100%;
+    font-family: Dosis;
+    color: #50514F;
+}
+
+.container{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    background-color: #DFE2EA;
+}
+
+section{
+    margin: 4em 3em 0 3em;
+}
+
+section h1{
+    padding: 2em .75em 1.25em;
+    text-decoration: underline;
+}
+
+header{
+    background: url(background_photo.jpg) no-repeat center center;
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+    min-height: 500px;
+  
+}
+
+a{
+    color: #50514F;
+}
+
+
+/* Nav */
+.navbar{
+    position:fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5rem 5rem;
+    width: 100%;
+    z-index: 1000;
+    transition: all ease .5s;
+    background: transparent;
+    top: 0;
+}
+
+.navbar.sticky{   /* Effect from scroll */
+    height: 5em;
+    transition: all ease .3s;
+    background: black;
+    opacity: .8;
+    color: white;
+}
+
+.navbar.sticky .navbar-brand, .nav-link{
+    transition: all ease .5s;
+}
+
+.nav-link.sticky{
+    color: white;
+
+}
+
+li a:hover{
+    border-bottom: groove;
+    border-bottom-color: #50514F;
+    color: #50514F;
+}
+
+.navbar-brand{
+    font-size: 3rem;
+}
+
+.btn-secondary{
+    color: #50514F;
+    background-color: transparent;
+    border-color: #50514F;
+    border-radius: 100%;
+}
+
+/* Welcome */
+
+.myProfile{
+    text-align: center !important;
+    padding-top: 15%;
+}
+
+#profile_pic{
+    width: 14em;
+    max-width: 100%;
+}
+
+.material-icons{
+    font-size: 40px;
+}
+
+/* About Me */
+
+#myStory{
+    text-align: center;
+}
+
+
+/* Projects */
+
+
+.projects{
+    text-align: center;
+}
+
+.projects .box{
+    display: inline-block;
+    background: #fff;
+    width: 15em;
+    height: 15em;
+    margin: 0 1em 2em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.projects .box .hoverbox{
+    background: rgba(48, 57, 92, .9);
+    position: relative;
+    top: -100%;
+    height: 100%;
+    position: 100%;
+    transition: all .5s ease;
+    text-align: left;
+    opacity: 0;
+}
+
+.projects .box .hoverbox h3{
+    color: #fff;
+    font-weight: bold;
+    padding: 1em 0 .5em .25em;
+}
+
+.projects .box .hoverbox h5{
+    color: #fff;
+    font-size: 1.25em;
+    padding-left: .25em;
+}
+
+.btn-light{
+    margin-left: .35em;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2), 0 7px 20px 0 rgba(0, 0, 0, .17);
+    animation-name:modalactive;
+    animation-duration: 1s;
+}
+
+@keyframes modalactive{
+    from {opacity:0}
+    to{opacity: 1}
+}
+
+#slider, .wrap, .slide-content{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.wrap{
+    position: relative;
+}
+
+.wrap p{
+    margin-bottom: 0;
+}
+
+.slide{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+.slide1{
+    background-image: url('FlaskAppProject/FlaskAppRegister.png');
+}
+
+.slide2{
+    background-image: url('FlaskAppProject/FlaskAppLogin.png');
+}
+
+.slide3{
+    background-image: url('FlaskAppProject/FlaskAppArticles.png');
+}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span{
+    font-size: 5rem;
+}
+
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left{
+    border-width: 20px 30px 20px 0;
+    left: 0;
+    margin-left: .5em;
+    border-color: transparent #1E1D1E transparent transparent;
+}
+
+#arrow-right{
+    border-width: 20px 0 20px 30px;
+    right: 0;
+    margin-right: .5em;
+    border-color: transparent transparent transparent #1E1D1E;
+}
+
+.closeBtn{
+    color: #ccc;
+    text-align: right;
+    font-size: 35px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.projects .box:hover .hoverbox{
+    top: 0;
+    opacity: 1;
+}
+
+/* Contact */
+
+footer{
+    background-color: #1E1D1E;
+    height: 7em;
+    padding: 0 5em;
+}
+
+.social_media{
+    list-style: none;
+    display: flex;
+    float: right;
+    margin-top: 2.25em;
+    margin-right: 1em;
+}
+
+.social_media li{
+    margin-right: 1em;
+}
+
+#email{
+    font-size: 1.5em;
+    padding-top: 1.75em;
+    font-weight: bolder;
+    margin-left: 1.5em;
+}
+
+.fa{
+    font-size: 2.5em;
+}
+
+form{
+    display: grid;
+}
+
+input{
+    margin-bottom: .5em;
+}
+
+
+
+
+
+/*.nav-scroll{
+    padding-top: 1em;
+    background: black;
+    opacity: .8;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-brand-header a{
+    font-size: 2em;
+}
+
+.nav-brand-header ul{
+    list-style: none;
+    display: flex;
+    float: right;
+    font-size: 1.05em;
+}
+
+.nav-brand-header ul li{
+    padding: 0 1em;
+}*/
